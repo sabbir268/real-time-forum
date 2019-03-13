@@ -41,13 +41,13 @@ class User extends Authenticatable
 
     public function question()
     {
-        return $this->hasMany(Question::calss);
+        return $this->hasMany(Question::class);
     }
 
 
     public function replies()
     {
-        return $this->hasMany(Reply::calss);
+        return $this->hasMany(Reply::class);
     }
 
 
