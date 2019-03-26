@@ -9,7 +9,7 @@
 						</v-toolbar>
 						<v-card-text>
 							<v-form @submit.prevent="login">
-								<v-text-field prepend-icon="person" v-model="form.email" name="emil" label="Email" type="email"></v-text-field>
+								<v-text-field prepend-icon="person" v-model="form.email" name="email" label="Email" type="email"></v-text-field>
 								<v-text-field prepend-icon="lock" name="password" label="Password" id="password" v-model="form.password" type="password"></v-text-field>
 
 								<v-card-actions>
@@ -39,9 +39,15 @@ export default {
 			}
 		}
 	},
+	created(){
+		if (User.loggedIn()) {
+			this.$router.push({name:'forum'})
+		}
+	},
 	methods:{
 		login(){
 			User.login(this.form)
+			// this.$router.push({name:'forum'})
 		}
 	}
 }

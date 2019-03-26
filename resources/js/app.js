@@ -17,7 +17,9 @@ Vue.use(Vuetify)
 
 import User from './helpers/User'
 window.User = User
-console.log(User.id())
+
+
+window.EventBus = new Vue();
 
 Vue.component('AppHome', require('./components/AppHome.vue').default);
 

@@ -9,13 +9,12 @@
 <script>
 import toolbar from './Toolbar'
 import AppFooter from './AppFooter'
-import Login from './login/Login'
 export default {
 
   name: 'AppHome',
   
   components:{
-  	toolbar , AppFooter , Login
+  	toolbar , AppFooter 
   },
 
   data () {
